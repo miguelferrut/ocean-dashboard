@@ -1,6 +1,6 @@
 # Ocean Control Tower — Architecture Assessment (Phases 1–5)
 
-Status: **Draft for approval.** No application code has been written yet. Implementation (Phases 6–10) starts once the open decisions in §9 are answered.
+Status: **Historical.** This was the pre-implementation analysis. The decisions in §9 were answered on 2026-10-06 (everyone sees all records; Excel upload stays the update path; duplicate invoices are errors; VIP and Contecón are out of v1). Where this document and `architecture.md` / `database-design.md` differ, those two are current. Notably, the schema uses one invoice-grain `shipments` table instead of BL/container/invoice tables, for the reasons given in `database-design.md`.
 
 ---
 

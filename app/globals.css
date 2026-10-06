@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/* Design tokens carried over from the legacy dashboard so the new app looks familiar. */
+:root {
+  --paper: #edf0ef;
+  --surface: #ffffff;
+  --surface-2: #f6f8f8;
+  --ink: #17242f;
+  --muted: #56636b;
+  --line: #d2d9d8;
+  --brand: #1e4fa0;
+  --brand-ink: #ffffff;
+  --brand-soft: #e3eaf6;
+  --teal: #1c6e73;
+  --teal-soft: #d5e8e8;
+  --amber: #8a5d00;
+  --amber-soft: #f6eacb;
+  --red: #b8322e;
+  --red-soft: #f5dad8;
+  --sea: #2d5f8b;
+  --sea-soft: #dce6f1;
+  --green: #2e7d32;
+  --green-soft: #dbeedc;
+  --chart: #2d5f8b;
+  --grid: #e3e8e8;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #10171c;
+    --surface: #172229;
+    --surface-2: #1c2a32;
+    --ink: #e3eaec;
+    --muted: #9aa8b0;
+    --line: #2a3841;
+    --brand: #8fb1e8;
+    --brand-ink: #0e1a2e;
+    --brand-soft: #1a2740;
+    --teal: #4db0ac;
+    --teal-soft: #173a3c;
+    --amber: #e6ae45;
+    --amber-soft: #3b3017;
+    --red: #e5635c;
+    --red-soft: #3e1f1e;
+    --sea: #7fa8d4;
+    --sea-soft: #1c2e42;
+    --green: #7cc47f;
+    --green-soft: #1d3520;
+    --chart: #7fa8d4;
+    --grid: #24323a;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-soft: var(--brand-soft);
+  --color-teal: var(--teal);
+  --color-teal-soft: var(--teal-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --color-red: var(--red);
+  --color-red-soft: var(--red-soft);
+  --color-sea: var(--sea);
+  --color-sea-soft: var(--sea-soft);
+  --color-green: var(--green);
+  --color-green-soft: var(--green-soft);
+  --font-sans: var(--font-barlow), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-barlow-condensed), "Arial Narrow", system-ui, sans-serif;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
