@@ -2,7 +2,7 @@
 
 | Piece | Where |
 |---|---|
-| App | Vercel project `ocean-control-tower`, linked to `miguelferrut/ocean-dashboard` |
+| App | Vercel project `ocean-control-tower` (https://ocean-control-tower-one.vercel.app), linked to `miguelferrut/ocean-dashboard` |
 | Database / Auth / Storage | Supabase project `ocean-control-tower` (ref `mchhedhxlfkthfoiroee`) |
 | Production branch | `main`. Every other branch and PR gets a Preview deployment |
 
@@ -12,7 +12,7 @@
 |---|---|---|---|
 | `NEXT_PUBLIC_SUPABASE_URL` | all | no | `https://mchhedhxlfkthfoiroee.supabase.co` |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | all | no | Anon or publishable key. Public by design; RLS protects data |
-| `NEXT_PUBLIC_SITE_URL` | production | no | e.g. `https://ocean-control-tower.vercel.app`. Used in email links |
+| `NEXT_PUBLIC_SITE_URL` | production | no | `https://ocean-control-tower-one.vercel.app`. Used in email links |
 | `SUPABASE_SERVICE_ROLE_KEY` | production, preview | **yes** | Supabase → Project Settings → API keys → `service_role` / secret key. Only used to invite and disable users |
 
 `.env.example` documents the same variables for local use.
@@ -22,7 +22,7 @@
 1. **Turn off public sign-ups:** Authentication → Sign In / Providers → turn off *Allow new users to sign up*. Accounts are invite-only. New accounts are also inactive by default, as a second safeguard.
 2. **URL configuration:** Authentication → URL Configuration
    - Site URL: the production URL.
-   - Redirect URLs: `https://<prod-domain>/**` and `https://*-miguelferruts-projects.vercel.app/**` (previews), plus `http://localhost:3000/**`.
+   - Redirect URLs: `https://<prod-domain>/**` and `https://ocean-control-tower-*-miguelferrut-7344.vercel.app/**` (previews), plus `http://localhost:3000/**`.
 3. **Email templates** (Authentication → Emails), so links work in any browser:
    - *Invite user:* `<a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=invite&next=/update-password">Accept the invitation</a>`
    - *Reset password:* `<a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=recovery&next=/update-password">Reset your password</a>`

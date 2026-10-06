@@ -54,7 +54,7 @@ Types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `perf`, `ci`. Breakin
 1. Add `supabase/migrations/<yyyymmddhhmmss>_<name>.sql`. Never edit a migration that has already been applied.
 2. Every new table: `enable row level security`, plus explicit policies for each action.
 3. Regenerate `types/database.types.ts`.
-4. Run the Supabase security and performance advisors.
+4. Run the Supabase security and performance advisors, and the checks in `supabase/tests/rls_checks.sql`.
 
 ## Adding a permission
 
